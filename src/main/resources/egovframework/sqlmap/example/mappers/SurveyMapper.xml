@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="egovframework.example.sample.service.impl.SurveyMapper">
+	
+	
+	<insert id="insertSurvey" parameterType="egovframework.example.sample.service.SurveyVO">
+	  INSERT INTO survey (title, description)
+	  VALUES (#{title}, #{description})
+	</insert>
+	
+	<select id="selectSurveyList" resultType="egovframework.example.sample.service.SurveyVO">
+		SELECT survey_id AS surveyId,
+		       title,
+		       description,
+		       created_at AS regDate
+		FROM survey
+		ORDER BY order_no ASC
+	</select>
+	
+	<update id="updateSurveyOrder">
+    	UPDATE survey
+    	SET order_no = #{orderNo}
+    	WHERE survey_id = #{surveyId}
+	</update>
+
+</mapper>
