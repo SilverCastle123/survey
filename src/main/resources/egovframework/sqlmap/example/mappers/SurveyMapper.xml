@@ -22,5 +22,9 @@
     	SET order_no = #{orderNo}
     	WHERE survey_id = #{surveyId}
 	</update>
+	
+	<delete id="deleteSurvey" parameterType="int">
+    DELETE FROM survey WHERE survey_id = #{surveyId}
+	</delete>
 
 </mapper>

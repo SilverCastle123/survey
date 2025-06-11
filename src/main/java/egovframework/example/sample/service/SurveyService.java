@@ -7,6 +7,7 @@ public interface SurveyService {
 	List<SurveyVO> selectSurveyList();
 //	void updateSurveyOrder(int surveyId, int orderNo);
 	void updateSurveyOrder(SurveyVO survey);
+	 void deleteSurvey(int surveyId) throws Exception;
 
 
 }

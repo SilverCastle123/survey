@@ -51,4 +51,9 @@ public class SurveyServiceImpl implements SurveyService {
     public void updateSurveyOrder(SurveyVO survey) {
         surveyMapper.updateSurveyOrder(survey.getSurveyId(), survey.getOrderNo());
     }
+    
+    @Override
+    public void deleteSurvey(int surveyId) throws Exception {
+        surveyMapper.deleteSurvey(surveyId);
+    }
 }

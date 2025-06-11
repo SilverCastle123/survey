@@ -12,5 +12,6 @@ public interface SurveyMapper {
 	void insertSurvey(SurveyVO survey);
 	List<SurveyVO> selectSurveyList();
 	 void updateSurveyOrder(@Param("surveyId") int surveyId, @Param("orderNo") int orderNo);
+	 void deleteSurvey(int surveyId);
 
 }
